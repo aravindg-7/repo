@@ -1,0 +1,51 @@
+<div class="container">
+        <div class="row">
+        <div class="card card1 mb-5 mt-3">
+                <div class="card-header">
+                        <h4>Welcome To Online Blood Donation System</h4>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">A voluntary blood donors platform.</h5>
+                  <p class="card-text">Every Year about 5 crore units of blood is required in our country. Out of which, only 2.5 crore units of blood are available.</p>
+                  <p class="card-text"> Online Blood Donation System is an online platform where donors and recipients or patients could meet together.</p>
+                  <p class="card-text"> Our blood donors donate blood for emergency need, the needy and natural calamities.</p>
+                  <a routerLink="registration/" class="btn btn-primary">Register Now!!</a>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col 6">
+        <div class="card card2">
+            <div class="card-header">
+                <h5>Facts</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">1. GIVING BLOOD IS SAFE.</p>
+                <p class="card-text">2. GIVING BLOOD IS EASY.</p>
+                <p class="card-text">3. GIVING BLOOD IS FAST.</p>
+                <p class="card-text">4. GIVING BLOOD SAVES LIVES.</p>
+                
+            </div>
+        </div>
+            </div>
+            <div class="col 6 force-overflow">
+                <div class="card cardclass">
+                        <div *ngFor="let i of reqlist">
+                        <div class="card-header">
+                                <h5>Requests</h5>
+                            </div>
+                    <div class="card-text">
+               <div>BloodGroup: {{i.bloodGroup}}</div>
+               <div>State: {{i.state}}</div>
+               <div *ngIf="this.authservice.loggedIn">contactNumber: {{i.contactNumber}}</div>
+               <div>pincode: {{i.pincode}}</div>
+               <!-- <div *ngIf="this.authservice.isAdmin">
+                   <button type="button" class="btn btn-danger" (click)="onclick()">Delete</button>
+               </div> -->
+               </div>
+                    </div>
+                    </div>
+
+</div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="card card1 mt-5">
+
+    <table class="table">
+        <tr>
+        <th>Bloodgroup</th>
+        <th>State</th>
+        <th>Area</th>
+        <th>ContactNumber</th>
+        <th>PinCode</th></tr>
+        <tr *ngFor="let i of donorlist">
+            <td>{{i.bloodGroup}}</td>
+            <td>{{i.state}}</td>
+            <td>{{i.area}}</td>
+            <td>{{i.contactNumber}}</td>
+            <td>{{i.pincode}}</td>
+        </tr>
+    </table>
+</div>
+</div>
